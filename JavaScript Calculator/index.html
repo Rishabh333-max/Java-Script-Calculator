@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script Calculator</title>
+    </head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+      body{margin: 0px;
+      padding: 0%;}
+      #header{
+          width: 100%;
+          height: 250px;
+          background-color: salmon;
+          color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+      }
+      #forms{
+          width: 100%;
+          height: 200px;
+          background-color: grey;
+          color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }  
+      #result{width: 100%;
+      height: 250px;
+      background-color: green;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+    
+    @media only screen and (max-width:1024px){ body{margin: 0px;
+        padding: 0%;}
+        #header{
+            width: 100%;
+            height: 460px;
+            background-color: salmon;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+  
+        }
+        #forms{
+            width: 100%;
+            height: 460px;
+            background-color: grey;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+        #result{width: 100%;
+        height: 460px;
+        background-color: green;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }}
+        @media only screen and (max-width:768px){ body{margin: 0px;
+        padding: 0%;}
+        #header{
+            width: 100%;
+            height: 350px;
+            background-color: salmon;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+  
+        }
+        #forms{
+            width: 100%;
+            height: 350px;
+            background-color: grey;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+        #result{width: 100%;
+        height: 350px;
+        background-color: green;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }}
+        @media only screen and (max-width:540px){ body{margin: 0px;
+        padding: 0%;}
+        #header{
+            width: 100%;
+            height: 250px;
+            background-color: salmon;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+  
+        }
+        #forms{
+            width: 100%;
+            height: 250px;
+            background-color: grey;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+        #result{width: 100%;
+        height: 250px;
+        background-color: green;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }}
+        @media only screen and (max-width:414px){ body{margin: 0px;
+        padding: 0%;}
+        #header{
+            width: 100%;
+            height: 280px;
+            background-color: salmon;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+  
+        }
+        #forms{
+            width: 100%;
+            height: 280px;
+            background-color: grey;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+        #result{width: 100%;
+        height: 280px;
+        background-color: green;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }}
+        @media only screen and (max-width:375px){ body{margin: 0px;
+        padding: 0%;}
+        #header{
+            width: 100%;
+            height: 200px;
+            background-color: salmon;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+  
+        }
+        #forms{
+            width: 100%;
+            height: 200px;
+            background-color: grey;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+        #result{width: 100%;
+        height: 200px;
+        background-color: green;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }}
+        </style>
+    <body>
+        <div id="header">
+            
+                Java Script Calculator
+            
+        </div>
+        <div id="forms">
+        <form>
+           
+            <input type="number" id="num1" placeholder="NUMBER1">
+            <input type="number" id="num2" placeholder="NUMBER2">
+            <button id="add">ADD</button>
+            <button id="sub">SUB</button>
+            <button id="mul">MUL</button>
+            <button id="div">DIV</button>
+        </form></div>
+        <div id="result">
+            result
+            </div>
+        
+       
+
+    </body>
+    <script>
+        var num1=document.getElementById("num1");
+        var num2=document.getElementById("num2");
+        var add=document.getElementById("add");
+        var sub=document.getElementById("sub");
+        var mul=document.getElementById("mul");
+        var div=document.getElementById("div");
+        var result=document.getElementById("result");
+        add.addEventListener("click",function(e){
+            e.preventDefault();
+   
+        var x=parseInt(num1.value);
+        var y=parseInt(num2.value);
+        var z=x+y;
+        result.innerHTML=z;
+        num1.value="";
+        num2.value="";
+    })
+    sub.addEventListener("click",function(e){
+            e.preventDefault();
+   
+        var x=parseInt(num1.value);
+        var y=parseInt(num2.value);
+        var z=x-y;
+        result.innerHTML=z;
+        num1.value="";
+        num2.value="";
+    })
+    mul.addEventListener("click",function(e){
+            e.preventDefault();
+   
+        var x=parseInt(num1.value);
+        var y=parseInt(num2.value);
+        var z=x*y;
+        result.innerHTML=z;
+        num1.value="";
+        num2.value="";
+    })
+    div.addEventListener("click",function(e){
+            e.preventDefault();
+   
+        var x=parseInt(num1.value);
+        var y=parseInt(num2.value);
+        var z=x/y;
+        result.innerHTML=z;
+        num1.value="";
+        num2.value="";
+    })
+
+    </script>
+</html>

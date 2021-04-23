@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Map And Filter
+        </title>
+    </head>
+    <body>
+        <div id="Hello">Hello</div>
+    </body>
+    <script>
+        var array1=[
+            {
+                name:"Rishabh",age:21
+            },
+            {
+                name:"Himanshu",age:21
+            }
+        ];
+        array1.map((item)=>{
+            console.log(item);
+        })
+        var result=array1.filter((item)=>{
+            return item.age=21;
+        })
+        console.log(result);
+    </script>
+</html>
